@@ -1,8 +1,17 @@
-function openImage(img) {
-    document.getElementById("lightbox").style.display = "flex";
-    document.getElementById("lightbox-img").src = img.src;
+let display = document.getElementById("display");
+
+function appendValue(value) {
+  display.value += value;
 }
 
-function closeImage() {
-    document.getElementById("lightbox").style.display = "none";
+function clearDisplay() {
+  display.value = "";
+}
+
+function calculate() {
+  try {
+    display.value = eval(display.value);
+  } catch {
+    display.value = "Error";
+  }
 }
