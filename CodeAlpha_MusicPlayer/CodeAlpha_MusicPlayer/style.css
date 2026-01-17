@@ -1,1 +1,76 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
 
+body {
+  margin: 0;
+  height: 100vh;
+  background: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.player {
+  background: white;
+  width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.player h2 {
+  margin: 10px 0 5px;
+}
+
+.player h3 {
+  margin: 0 0 15px;
+  font-size: 14px;
+  color: gray;
+}
+
+#progress {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-around;
+  margin: 15px 0;
+}
+
+.controls button {
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  background: #0056b3;
+}
+
+#volume {
+  width: 100%;
+}
+#playlist {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+#playlist li {
+  padding: 8px;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+}
+
+#playlist li:hover {
+  background-color: #f0f0f0;
+  }
