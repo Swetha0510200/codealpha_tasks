@@ -2,39 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Calculator</title>
+  <title>Music Player</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1>Calculator</h1>
+  <div class="player">
+    <h2 id="title">Song Title</h2>
+    <h3 id="artist">Artist Name</h3>
+    <p id="duration">00:00</p>
 
-  <div class="calculator">
-    <input type="text" id="display" disabled>
+    <audio id="audio"></audio>
 
-    <div class="buttons">
-      <button onclick="clearDisplay()">C</button>
-      <button onclick="appendValue('/')">/</button>
-      <button onclick="appendValue('*')">*</button>
-      <button onclick="appendValue('-')">-</button>
+    <input type="range" id="progress" value="0">
 
-      <button onclick="appendValue('7')">7</button>
-      <button onclick="appendValue('8')">8</button>
-      <button onclick="appendValue('9')">9</button>
-      <button onclick="appendValue('+')">+</button>
-
-      <button onclick="appendValue('4')">4</button>
-      <button onclick="appendValue('5')">5</button>
-      <button onclick="appendValue('6')">6</button>
-
-      <button onclick="appendValue('1')">1</button>
-      <button onclick="appendValue('2')">2</button>
-      <button onclick="appendValue('3')">3</button>
-
-      <button onclick="appendValue('0')" class="zero">0</button>
-      <button onclick="calculate()">=</button>
+    <div class="controls">
+      <button id="prev">⏮</button>
+      <button id="play">▶</button>
+      <button id="next">⏭</button>
     </div>
+
+    <label>Volume</label>
+    <input type="range" id="volume" min="0" max="1" step="0.01" value="0.5">
   </div>
+  <ul id="playlist"></ul>
 
   <script src="script.js"></script>
 </body>
